@@ -1,4 +1,4 @@
-import { IconName } from '../types/iconName.ts'
+import { IconName } from '@/shared/types/iconName.ts'
 import React, { FC } from 'react'
 import { IconLogo } from './exports.ts'
 
