@@ -5,12 +5,9 @@ export enum ThemeEnum {
 
 export interface ITheme {
   colors: {
-    white: string;
-    black: string;
-    gray: string;
-    bg: string;
-    title: string;
-    text: string;
-    secondaryTitle: string;
+    bg: string
+    title: string
+    text: string
+    secondaryTitle: string
   }
 }
