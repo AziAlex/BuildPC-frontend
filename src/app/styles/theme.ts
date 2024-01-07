@@ -23,7 +23,6 @@ export const lightTheme: DefaultTheme = {
   colors: {
     ...baseTheme.colors,
     bg: '#FFFFFF',
-    font: '#4B4B4B',
   },
 }
 
