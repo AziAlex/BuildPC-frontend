@@ -7,12 +7,30 @@ export default createGlobalStyle`
     color: #000000; /* Цвет текста */
   }
   
+  //scrollbar
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--grayLight);
+    box-shadow: inset 0 0 5px var(--grayLight);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
   *, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     font-size: 14px;
+    scrollbar-width: thin;
   }
 
   body {
@@ -37,15 +55,15 @@ export default createGlobalStyle`
   }
   
   h2 {
-    font-size: ${pxToRem(48)};
-  }
-  
-  h3 {
     font-size: ${pxToRem(34)};
   }
   
-  h4 {
+  h3 {
     font-size: ${pxToRem(24)};
+  }
+  
+  h4 {
+    font-size: ${pxToRem(20)};
   }
   
   h5 {
