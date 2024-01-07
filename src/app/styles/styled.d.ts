@@ -1,5 +1,5 @@
 import 'styled-components'
-import { ITheme, ThemeEnum } from 'interfaces/styled'
+import { ITheme, ThemeEnum } from '@/shared/types/styled.ts'
 
 declare module 'styled-components' {
   export interface DefaultTheme extends ITheme {
