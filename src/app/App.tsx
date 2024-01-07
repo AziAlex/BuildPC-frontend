@@ -9,6 +9,8 @@ export const AppWrapper = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.colors.bg};
   color: ${({ theme }) => theme.colors.text};
+  overflow: hidden;
+  padding: 40px 40px 40px 0;
 `
 
 function App() {
@@ -18,7 +20,6 @@ function App() {
       <AppWrapper>
         <MainPage />
       </AppWrapper>
-      <MainPage />
     </AppProviders>
   )
 }

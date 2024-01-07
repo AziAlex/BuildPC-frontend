@@ -1,17 +1,30 @@
-import { NavAccessoriesWrapper, NavAccessoriesWrapperLayout } from './style.ts'
-import { useAppDispatch } from '@/app/redux/hooks.ts'
-import { toggleTheme } from '@/app/redux/slice/theme.slice.ts'
-
+import {
+  AccessoriesCategoriesList,
+  ContentBox,
+  Logo,
+  NavAccessoriesWrapper,
+  NavAccessoriesWrapperLayout,
+} from './style.ts'
+import { Icon } from '@/shared/svg'
+import { categoriesAccessories } from '@/shared/data/categoriesAccessories.ts'
+import { AccessoryCategoryItem } from '@/entities/accessory-category-item/index.tsx'
 
 export const NavAccessories = () => {
-  const dispatch = useAppDispatch()
-
   return (
     <NavAccessoriesWrapperLayout>
       <NavAccessoriesWrapper>
-        <button onClick={() => dispatch(toggleTheme())}>
-          123
-        </button>
+        <ContentBox>
+          <Logo>
+            <Icon name={'logo'} />
+            <span>Components</span>
+          </Logo>
+
+          <AccessoriesCategoriesList>
+            {categoriesAccessories.map((category) => (
+              <AccessoryCategoryItem category={category} />
+            ))}
+          </AccessoriesCategoriesList>
+        </ContentBox>
       </NavAccessoriesWrapper>
     </NavAccessoriesWrapperLayout>
   )
