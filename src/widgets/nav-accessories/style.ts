@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import '@/app/styles/variables.css'
-import { pxToRem } from '@/shared/utils'
+import { clamp, pxToRem } from '@/shared/utils'
 
 export const NavAccessoriesWrapperLayout = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const NavAccessoriesWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 368px;
+  width: ${clamp(300, 368)};
   background-color: var(--black);
   opacity: 0.9;
   border-radius: 0 20px 20px 0;
@@ -21,7 +21,8 @@ export const NavAccessoriesWrapper = styled.div`
 
 export const ContentBox = styled.div`
   height: 100%;
-  max-height: 650px;
+  width: 100%;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +33,8 @@ export const Logo = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${pxToRem(10)};
+  color: var(--white);
+  padding-bottom: 30px;
 
   & > svg {
     width: 28px;
@@ -39,7 +42,7 @@ export const Logo = styled.div`
   }
 
   & > span {
-    font-size: 24px;
+    font-size: ${pxToRem(24)};
     font-style: normal;
     font-weight: 600;
     line-height: 125%; /* 30px */
@@ -47,11 +50,7 @@ export const Logo = styled.div`
   }
 `
 
-export const CategotiesList = styled.div`
+export const AccessoriesCategoriesList = styled.ul`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  &:last-child {
-  }
+  overflow-y: auto;
 `
