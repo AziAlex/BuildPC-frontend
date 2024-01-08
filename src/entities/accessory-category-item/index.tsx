@@ -1,6 +1,6 @@
-import { Icon } from '@/shared/svg'
 import { ICategoryAccessory } from '@/shared/types/ICategoryAccessory.ts'
 import { AccessoryCategoryItemStyled } from '@/entities/accessory-category-item/style.ts'
+import { Icon } from '@/shared/svg'
 
 type Props = {
   category: ICategoryAccessory
