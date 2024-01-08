@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const AccessoryCategoryItem = ({ category }: Props) => (
-  <AccessoryCategoryItemStyled key={category.id}>
+  <AccessoryCategoryItemStyled>
     <Icon name={category.svg} />
 
     <div>

@@ -21,7 +21,7 @@ export const NavAccessories = () => {
 
           <AccessoriesCategoriesList>
             {categoriesAccessories.map((category) => (
-              <AccessoryCategoryItem category={category} />
+              <AccessoryCategoryItem key={category.id} category={category} />
             ))}
           </AccessoriesCategoriesList>
         </ContentBox>
