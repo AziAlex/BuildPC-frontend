@@ -1,7 +1,7 @@
 import { ContainerBoxStyled } from '@/feature/container-box/style.ts'
 import { FC } from 'react'
 
-type Props = {
+interface Props {
   children: React.ReactNode
 }
 
