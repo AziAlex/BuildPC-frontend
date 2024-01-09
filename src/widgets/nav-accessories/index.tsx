@@ -1,3 +1,6 @@
+import { categoriesAccessories } from '@/shared/data/categoriesAccessories.ts'
+import { AccessoryCategoryItem } from '@/entities/accessory-category-item/index.tsx'
+import { Icon } from '@/shared/svg'
 import {
   AccessoriesCategoriesList,
   ContentBox,
@@ -5,9 +8,6 @@ import {
   NavAccessoriesWrapper,
   NavAccessoriesWrapperLayout,
 } from './style.ts'
-import { Icon } from '@/shared/svg'
-import { categoriesAccessories } from '@/shared/data/categoriesAccessories.ts'
-import { AccessoryCategoryItem } from '@/entities/accessory-category-item/index.tsx'
 
 export const NavAccessories = () => {
   return (
