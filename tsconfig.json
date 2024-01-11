@@ -28,12 +28,6 @@
       "@/variables": [
         "./src/app/styles/variables.css"
       ],
-      "@/hooks/*": [
-        "./src/shared/hooks/*"
-      ],
-//      "@/redux/hooks": [
-//        "./src/app/redux/hooks.ts"
-//      ],
       "@/redux/slices/*": [
         "./src/app/redux/services/*"
       ]
