@@ -8,6 +8,8 @@ import { IconMotherboard } from '@/shared/svg/ui/accessories/IconMotherboard.tsx
 import { IconPowerSupply } from '@/shared/svg/ui/accessories/IconPowerSupply.tsx'
 import { IconProcessor } from '@/shared/svg/ui/accessories/IconProcessor.tsx'
 import { IconVideoCard } from '@/shared/svg/ui/accessories/IconVideoCard.tsx'
+import { IconBalance } from '@/shared/svg/ui/icons/IconBalance.tsx'
+import { IconPlus } from '@/shared/svg/ui/icons/IconPlus.tsx'
 
 interface Props {
   name: IconName
@@ -23,6 +25,8 @@ export const Icon: FC<Props> = ({ name }) => {
     powerSupply: <IconPowerSupply />,
     processor: <IconProcessor />,
     videoCard: <IconVideoCard />,
+    balance: <IconBalance />,
+    plus: <IconPlus />,
   }
 
   return icons[name]

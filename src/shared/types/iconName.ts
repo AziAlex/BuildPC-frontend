@@ -7,3 +7,5 @@ export type IconName =
   | 'powerSupply'
   | 'processor'
   | 'videoCard'
+  | 'balance'
+  | 'plus'
