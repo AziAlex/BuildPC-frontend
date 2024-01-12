@@ -5,7 +5,7 @@ import { numberToPrice } from '@/shared/utils/numberToPrice.ts'
 import { Button } from '@/shared/ui/button'
 import { getFirstWord } from '@/shared/utils/getFirstWord.ts'
 import { getExceptFirstWord } from '@/shared/utils/getExceptFirstWord.ts'
-import useChangeWidthCharacteristicItem from '@/shared/hooks/useChangeWidthCharacteristicItem.ts'
+import { useChangeWidthCharacteristicItem } from '@/shared/hooks/useChangeWidthCharacteristicItem.ts'
 
 import { currentAccessory as item } from '@/shared/data/currentAccessory.ts'
 import {

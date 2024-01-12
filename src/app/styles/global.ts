@@ -53,7 +53,7 @@ export default createGlobalStyle`
     font-weight: 600;
   }
 
-  h2, h3, h4 {
+  h2, h3, h4, h6 {
     color: var(--black);
   }
   

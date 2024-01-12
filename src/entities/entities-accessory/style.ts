@@ -12,9 +12,9 @@ export const CurrentItemInfo = styled.div`
   gap: 40px;
 
   & > img {
-    width: 210px;
-    max-height: 230px;
-    object-fit: cover;
+    max-width: 210px;
+    max-height: 200px;
+    object-fit: contain;
   }
 `
 

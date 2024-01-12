@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-function useChangeWidthCharacteristicItem<T extends HTMLElement>() {
+export const useChangeWidthCharacteristicItem = <T extends HTMLElement>() => {
   const ref = useRef<T | null>(null)
 
   useEffect(() => {
@@ -21,5 +21,3 @@ function useChangeWidthCharacteristicItem<T extends HTMLElement>() {
 
   return ref
 }
-
-export default useChangeWidthCharacteristicItem
