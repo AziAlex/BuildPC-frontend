@@ -1,22 +1,13 @@
 import { MainItemsWrapperStyled } from '@/feature/main-intem-wrapper/style.ts'
-import { FC, PropsWithChildren, useEffect, useRef, useState } from 'react'
+import { FC, PropsWithChildren } from 'react'
+import { useWrapperIsScrolled } from '@/shared/hooks/useWrapperIsScrolled.ts'
 
 export const MainItemsWrapper: FC<PropsWithChildren> = ({ children }) => {
-  const [isScroll, setIsScroll] = useState(false)
-  const wrapper = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const element = wrapper.current
-    if (!element) return
-
-    if (element.scrollHeight > element.clientHeight) {
-      setIsScroll(true)
-    }
-  }, [])
+  const { ref, isScroll } = useWrapperIsScrolled<HTMLDivElement>()
 
   return (
-    <MainItemsWrapperStyled $isScroll={isScroll} ref={wrapper}>
-      {children}
+    <MainItemsWrapperStyled $isScroll={!isScroll}>
+      <div ref={ref}>{children}</div>
     </MainItemsWrapperStyled>
   )
 }
