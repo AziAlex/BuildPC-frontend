@@ -1,13 +1,17 @@
 import { IconName } from '@/shared/types/iconName.ts'
 import React, { FC } from 'react'
-import { IconLogo } from './exports.ts'
-import { IconBody } from '@/shared/svg/ui/accessories/IconBody.tsx'
-import { IconCoolingSystem } from '@/shared/svg/ui/accessories/IconCoolingSystem.tsx'
-import { IconMemory } from '@/shared/svg/ui/accessories/IconMemory.tsx'
-import { IconMotherboard } from '@/shared/svg/ui/accessories/IconMotherboard.tsx'
-import { IconPowerSupply } from '@/shared/svg/ui/accessories/IconPowerSupply.tsx'
-import { IconProcessor } from '@/shared/svg/ui/accessories/IconProcessor.tsx'
-import { IconVideoCard } from '@/shared/svg/ui/accessories/IconVideoCard.tsx'
+import {
+  IconBalance,
+  IconBody,
+  IconCoolingSystem,
+  IconLogo,
+  IconMemory,
+  IconMotherboard,
+  IconPlus,
+  IconPowerSupply,
+  IconProcessor,
+  IconVideoCard,
+} from './exports.ts'
 
 interface Props {
   name: IconName
@@ -23,6 +27,8 @@ export const Icon: FC<Props> = ({ name }) => {
     powerSupply: <IconPowerSupply />,
     processor: <IconProcessor />,
     videoCard: <IconVideoCard />,
+    balance: <IconBalance />,
+    plus: <IconPlus />,
   }
 
   return icons[name]

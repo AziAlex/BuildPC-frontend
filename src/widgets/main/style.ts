@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const MainStyled = styled.main`
+  flex-grow: 1;
   display: grid;
-  width: 100%;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 959fr 455fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 40px;
+  gap: 20px 40px;
 `

@@ -31,11 +31,13 @@ export default createGlobalStyle`
     outline: none;
     font-size: 14px;
     scrollbar-width: thin;
-  }
-
-  body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: transparent;
   }
 
   a {
@@ -49,13 +51,17 @@ export default createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
   }
+
+  h2, h3, h4 {
+    color: var(--black);
+  }
   
   h1 {
     font-size: ${pxToRem(58)};
   }
   
   h2 {
-    font-size: ${pxToRem(34)};
+    font-size: ${pxToRem(32)};
   }
   
   h3 {
@@ -68,6 +74,7 @@ export default createGlobalStyle`
   
   h5 {
     font-size: ${pxToRem(18)};
+    color: var(--grayDark);
   }
   
   h6 {

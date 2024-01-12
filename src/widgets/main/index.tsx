@@ -1,11 +1,10 @@
-import { MainItemsWrapper } from '@/feature/container-box'
 import { MainStyled } from '@/widgets/main/style.ts'
+import { CurrentItem } from '@/entities/entities-accessory'
+import { MainItemsWrapper } from '@/feature/main-intem-wrapper'
 
 export const Main = () => (
   <MainStyled>
-    <MainItemsWrapper>
-      <></>
-    </MainItemsWrapper>
+    <CurrentItem />
     <MainItemsWrapper>
       <></>
     </MainItemsWrapper>
