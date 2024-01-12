@@ -1,11 +1,22 @@
-import { ContainerBoxStyled } from '@/feature/main-intem-wrapper/style.ts'
-import { FC } from 'react'
+import { MainItemsWrapperStyled } from '@/feature/main-intem-wrapper/style.ts'
+import { FC, PropsWithChildren, useEffect, useRef, useState } from 'react'
 
-interface Props {
-  children: React.ReactNode
-  isScroll?: boolean
-}
+export const MainItemsWrapper: FC<PropsWithChildren> = ({ children }) => {
+  const [isScroll, setIsScroll] = useState(false)
+  const wrapper = useRef<HTMLDivElement>(null)
 
-export const MainItemsWrapper: FC<Props> = ({ children, isScroll }) => {
-  return <ContainerBoxStyled $isScroll={isScroll}>{children}</ContainerBoxStyled>
+  useEffect(() => {
+    const element = wrapper.current
+    if (!element) return
+
+    if (element.scrollHeight > element.clientHeight) {
+      setIsScroll(true)
+    }
+  }, [])
+
+  return (
+    <MainItemsWrapperStyled $isScroll={isScroll} ref={wrapper}>
+      {children}
+    </MainItemsWrapperStyled>
+  )
 }
