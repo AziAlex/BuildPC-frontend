@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { pxToRem } from '@/shared/utils'
+import { hexToRgba } from '@/shared/utils/hexToRgb.ts'
 
 export const CharacteristicItemStyled = styled.li<{ $primary: boolean }>`
   display: flex;
@@ -17,12 +18,12 @@ export const CharacteristicItemStyled = styled.li<{ $primary: boolean }>`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: ${(props) => !props.$primary && `var(--grayLightSecond)`};
   }
 
   span {
     flex-grow: 1;
-    border-bottom: 2px solid var(--grayLightSecond);
-    opacity: 0.2;
+    border-bottom: 2px solid ${hexToRgba('--grayLightSecond', 0.2)};
     margin: 3px 10px;
   }
 
