@@ -33,6 +33,7 @@ export default createGlobalStyle`
     scrollbar-width: thin;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    scroll-behavior: smooth;
   }
   
   button {

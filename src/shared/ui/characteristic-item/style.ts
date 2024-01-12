@@ -12,8 +12,8 @@ export const CharacteristicItemStyled = styled.li<{ $primary: boolean }>`
   }
 
   p:last-child {
-    width: auto;
     max-width: 100%;
+    min-width: 100px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -28,6 +28,8 @@ export const CharacteristicItemStyled = styled.li<{ $primary: boolean }>`
 
   & > img {
     height: 22px;
+    min-width: 100px;
     object-position: left;
+    object-fit: contain;
   }
 `

@@ -16,7 +16,6 @@ function useChangeWidthCharacteristicItem<T extends HTMLElement>() {
 
     elements.forEach((el) => {
       el.style.width = `${maxWidth}px`
-      el.style.objectFit = 'contain'
     })
   }, [ref])
 
