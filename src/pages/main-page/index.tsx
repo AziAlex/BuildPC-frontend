@@ -1,5 +1,5 @@
 import { NavAccessories } from '@/widgets/nav-accessories'
-import { Main } from '@/widgets/main'
+import { Main } from '../ui/main'
 
 import { MainPageWrapper } from '@/pages/main-page/style.ts'
 
