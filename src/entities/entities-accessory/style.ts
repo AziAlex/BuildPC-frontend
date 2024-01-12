@@ -11,7 +11,7 @@ export const CurrentItemInfo = styled.div`
   display: flex;
   gap: 40px;
 
-  img {
+  & > img {
     width: 210px;
     max-height: 230px;
     object-fit: cover;
@@ -39,7 +39,7 @@ export const CurrentItemCharacteristics = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  > div {
+  > ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px 70px;

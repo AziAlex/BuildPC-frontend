@@ -15,5 +15,5 @@ export const currentAccessory: IAccessoryItem = {
     'Тепловыделение 65 Вт;',
     'Техпроцесс 14 нм;',
   ],
-  img: 'https://cdn.citilink.ru/Mx9_id88fGN6LUwtqn56rJ_tkHWfVWrifwU9xfR7TfQ/enlarge:1/gravity:ce/height:450/resizing_type:fit/width:450/plain/product-images/0e281141-b791-49ab-a71c-c3f71d9cc22c.jpg',
+  img: '/temp.webp',
 }

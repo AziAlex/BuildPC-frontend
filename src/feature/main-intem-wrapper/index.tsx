@@ -6,6 +6,6 @@ interface Props {
   isScroll?: boolean
 }
 
-export const MainItemsWrapper: FC<Props> = ({ children, isScroll }) => (
-  <ContainerBoxStyled $isScroll={isScroll}>{children}</ContainerBoxStyled>
-)
+export const MainItemsWrapper: FC<Props> = ({ children, isScroll }) => {
+  return <ContainerBoxStyled $isScroll={isScroll}>{children}</ContainerBoxStyled>
+}

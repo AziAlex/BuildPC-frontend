@@ -1,5 +1,3 @@
-import { useRef } from 'react'
-
 import { MainItemsWrapper } from '@/feature/main-intem-wrapper'
 import { removeAfterComma } from '@/shared/utils/removeAfterComma.ts'
 import { CharacteristicItem } from '@/shared/ui/characteristic-item'
@@ -19,10 +17,8 @@ import {
 } from './style.ts'
 
 export const CurrentItem = () => {
-  const characteristicItemsPrimary = useRef<HTMLDivElement>(null)
-  const characteristicItems = useRef<HTMLDivElement>(null)
-  useChangeWidthCharacteristicItem(characteristicItems)
-  useChangeWidthCharacteristicItem(characteristicItemsPrimary)
+  const characteristicItemsPrimary = useChangeWidthCharacteristicItem<HTMLUListElement>()
+  const characteristicItems = useChangeWidthCharacteristicItem<HTMLUListElement>()
 
   return (
     <MainItemsWrapper>
@@ -31,7 +27,7 @@ export const CurrentItem = () => {
           <img src={item.img} alt={item.name} />
           <CurrentItemDescription>
             <h2>{removeAfterComma(item.name)}</h2>
-            <div className="items" ref={characteristicItemsPrimary}>
+            <ul className="items" ref={characteristicItemsPrimary}>
               <CharacteristicItem
                 title={'Продавец'}
                 primary={true}
@@ -42,7 +38,7 @@ export const CurrentItem = () => {
                 primary={true}
                 characteristic={numberToPrice(item.price)}
               />
-            </div>
+            </ul>
             <CurrentItemDescriptionButtons>
               <Button value="Перейти в магазин" />
               <Button icon="balance" />
@@ -52,7 +48,7 @@ export const CurrentItem = () => {
         </CurrentItemInfo>
         <CurrentItemCharacteristics>
           <h5>Характеристики</h5>
-          <div ref={characteristicItems}>
+          <ul ref={characteristicItems}>
             {item.characteristics.map((characteristic, index) => (
               <CharacteristicItem
                 key={index}
@@ -60,7 +56,7 @@ export const CurrentItem = () => {
                 characteristic={getExceptFirstWord(characteristic)}
               />
             ))}
-          </div>
+          </ul>
         </CurrentItemCharacteristics>
       </CurrentItemWrapper>
     </MainItemsWrapper>

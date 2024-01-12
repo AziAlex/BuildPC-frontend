@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { pxToRem } from '@/shared/utils'
 
-export const CharacteristicItemStyled = styled.div<{ $primary: boolean }>`
+export const CharacteristicItemStyled = styled.li<{ $primary: boolean }>`
   display: flex;
   width: ${(props) => (props.$primary ? '350px' : '100%')};
 
@@ -26,7 +26,7 @@ export const CharacteristicItemStyled = styled.div<{ $primary: boolean }>`
     margin: 3px 10px;
   }
 
-  img {
+  & > img {
     height: 22px;
     object-position: left;
   }
